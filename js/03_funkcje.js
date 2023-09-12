@@ -33,28 +33,31 @@ calculateSupply(50, 1)
 
 // Create a function called calcCircumfrence:
 function calcCircumfrence(radius){
-    console.log(`The circumference is ${radius*2.14}`)
+    console.log(`The circumference is ${radius*2*3.14}`)
         
 }
-// Pass the radius to the function.
-// Calculate the circumference based on the radius, and output "The circumference is NN".
-// Create a function called calcArea:
-
-// Pass the radius to the function.
-// Calculate the area based on the radius, and output "The area is NN".
-
+function calcArea(radius){
+    console.log(`The area is ${3.14*radius**2}`)
+};
+calcCircumfrence(5);
+calcArea(5);
 // 5. 
 
 // It's hot out! Let's make a converter based on the steps here.
 
-// Create a function called celsiusToFahrenheit:
+function celsiusToFahrenheit(celsius){
+    console.log(`${celsius}°C is ${9/5*celsius+32}°F`)
+}
+function fahrenheitToCelsius(fahrenheit){
+    console.log(`${fahrenheit}°F is ${(fahrenheit-32)*5/9}`)
+}
+celsiusToFahrenheit(2)
+fahrenheitToCelsius(2)
 
-// Store a celsius temperature into a variable.
-// Convert it to fahrenheit and output "NN°C is NN°F".
-// Create a function called fahrenheitToCelsius:
-
-// Now store a fahrenheit temperature into a variable.
-// Convert it to celsius and output "NN°F is NN°C."
 
 
 // 6. Function `reverseNum()` returns the reversed number for the given argument number value. 
+function reverseNum(number){
+    return 1/number;
+}
+console.log(reverseNum(2));
