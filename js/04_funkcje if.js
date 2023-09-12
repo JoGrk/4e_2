@@ -107,4 +107,10 @@ function payMax(a,b,c){
 
 // 7. Utwórz funkcję czyTrojkat, która przyjmuje jako parametry trzy liczby i sprawdza, czy można z nich utworzyć trójkąt. Przykład: czyTrojkat(2,3,4) zwraca true, a czyTrojkat(4,3,8) zwraca false (najdłuższy bok musi być mniejszy od sumy dwóch pozostałych boków)
 
- 
+ function czyTrojat(a,b,c){
+    const sorted = [a,b,c].sort()
+    return (sorted[0] + sorted[1]) > sorted[2]
+ }
+$
+console.log("1",czyTrojat(1,2,3))
+console.log("2",czyTrojat(1,1,3))
