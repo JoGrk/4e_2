@@ -1,0 +1,30 @@
+1. Księżyc - planeta (księżyc krąży wokół planety)
+jeden księżyc krąży wokół JEDNEJ planety
+planeta może mieć WIELE księżyców
+jeden do wielu
+do tabeli księżyce wstawiamy klucz podstawowy z tabeli planety idPlanety
+2. planeta - gwiazda (planeta okrąża słońce)
+jedna planeta okrąża wokół WIELU gwiazd
+gwiazda może mieć WIELE planet
+wiele do wielu
+tworzymy nową tabelę z kluczami podstawowymi z obu tabel 
+
+3. państwo - kontynent 
+jeden kontynent ma  WIELE państw
+państwo może leżeć na WIELU kontynentach
+wiele do wielu
+tworzymy nową tabelę z kluczami podst. z obu tabel
+
+
+
+4. państwo - stolica
+
+5. państwo - morze (państwo ma dostęp do morza)
+
+6. czekoladka - bombonierka (czekoladka jest składnikiem bombonierki)
+
+7. Autor - książka (książka została napisana przez ... )
+
+8. Sprzedawca- aukcja (internetowa, np. na allegro.pl)
+
+9. Licytujący - aukcja (internetowa, np. na allegro.pl)
