@@ -19,6 +19,7 @@ tworzymy nową tabelę z kluczami podst. z obu tabel
 
 4. państwo - stolica
 
+
 5. państwo - morze (państwo ma dostęp do morza)
 
 6. czekoladka - bombonierka (czekoladka jest składnikiem bombonierki)
