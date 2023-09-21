@@ -59,7 +59,10 @@ values
 ('Blazej','Wojtas');
 
 -- 6. Wyświetl dane z obu tabel
-
+SELECT * FROM przewodnicy;
 -- 7. Usuń po jednym wierszu z każdej z tabel (dobierz warunek)
 DELETE FROM przewodnicy
 WHERE przewodnik=1;
+
+DELETE FROM wycieczki
+WHERE kod='1234'
