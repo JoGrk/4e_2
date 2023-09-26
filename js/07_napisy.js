@@ -35,9 +35,26 @@
  monkey("alapoczta")
 // 4. Napisz funkcję firstFive, która zwraca pięć pierwszych liter z tekstu, który jej parametrem (użyj substr)
 
+function firstFive(text){
+    return text.substr(0,5)
+}
+console.log(firstFive("BłażejWojtasJestSpecjalnyNaSwójSposób"))
+
+
 // 5. Napisz funkcję lastFive, która zwraca ostatnie pięć liter z tekstu, który jest jej parametrem (użyj substring)
 
+function lastFive(text){
+    return text.substring(text.length-5)
+}
+console.log(lastFive('Mateusz'))
+
 // 6. Zapisz funkcję midFive, która zwraca środkowe pięć znaków z tekstu, który jest jej parametrem (użyj slice)
+
+function midFive(text){
+    let mid= text.length/2;
+    return text.slice(mid-2,mid+3);
+}
+console.log(midFive('SiemaMati'))
 
 // 7. Mutowalne dane to dane, którym w czasie ich istnienia możemy zmieniać części składowe. Czy tablice są mutowalne? Czy napisy są mutowalne?
 
