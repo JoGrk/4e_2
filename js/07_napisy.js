@@ -57,17 +57,41 @@ function midFive(text){
 console.log(midFive('SiemaMati'))
 
 // 7. Mutowalne dane to dane, którym w czasie ich istnienia możemy zmieniać części składowe. Czy tablice są mutowalne? Czy napisy są mutowalne?
+let napis = "cos umiem"
+let tablice = [312,312,3,1]
 
+napis[4] = "5"
+tablice[2] = 2
+
+console.log(napis)
+console.log(tablice)
  
 
-//  A. utwórz funkcję changeFirst z jednym parametrem, która zmienia pierwszy element swojego parametru na znak @
-// B. Zadeklaruj listę (tablicę) zawierającą dowolne znaki oraz dowolny tekst
-// C. Wypisz efekt działania funkcji changeFirst  na  liście (tablicy)  oraz na tekście
+
 // 8 Przygotuj funkcję changeFirstText, która zwraca tekst ze zmienionym pierwszym znakiem na znak @
+function changeFirstText(text){
+    // text[0] = "@"  // nie działa
+    text=text.slice(1);
+    console.log(text)
+    return "@"+text
+}
+console.log(changeFirstText('jakikolwiek tekst'))
 
 // 9. Czy metoda replace zamienia tylko pierwsze wystąpienie swojego parametru drugim parametrem, czy wszystkie? (tekst.replace(t1, t2) ). Przygotuj eksperyment, który to sprawdzi.
+let text2="AcerFFGNUIDNUIDNFGsdkfn Acer"
+let text3=text2.replace("Acer","Samsung");
+console.log(text2)
+console.log(text3)
 
 // 10 napisz funkcję toClause, która przyjmuje jako parametr tekst i zwraca tablicę, w której każdy każde zdanie (tekst oddzielony kropką) jest osobnym elementem tej tablicy
+
+const text4 = 'ala ma kota. a kot ma ale. ala go kocha.a kot jej nie'
+
+let toClause = (text) => {
+    return text.split(".")
+}
+
+console.log(toClause(text4))
 
 // 11. zadeklaruj tekst o podanej treści i następnie wypisz tekst przekształcony zgodnie z jego treścią:
 
