@@ -1,4 +1,4 @@
-Przygotuj tabelę starocie:
+-- Przygotuj tabelę starocie:
 CREATE TABLE `starocie` (
   `kolor` varchar(20) default NULL,
   `rok` varchar(4) default NULL,
@@ -13,15 +13,24 @@ INSERT INTO `starocie` (`kolor`,`rok`,`marka`,`mo`,`koszt`) VALUES ('czerwony','
  
 -- Zmodyfikuj tabelę:
 -- 1. zmień nazwę tabeli starocie  na samochody
+alter table starocie 
+RENAME TO samochody;
  
 -- 2. dodaj kolumnę id_samochodu : całkowity, nie pusty, autoinkrementacja, na początku tabeli, klucz podstawowy
+alter table samochody 
+ADD id_samochodu int AUTO_INCREMENT  PRIMARY KEY FIRST;
+
  
 -- 3. Jako drugą dodaj kolumnę numer - tekst do 16 znaków
- 
+ ALTER TABLE samochody
+ add numer varchar(16) AFTER id_samochodu;
 -- 4. zmień nazwę pola mo na model (typ bez zmian)
- 
+ ALTER TABLE samochody
+ CHANGE mo model varchar(20);
 -- 5. Zmodyfikuj (modify) tabelę tak, aby kolumna kolor znalazła się za kolumną model, a kolumna rok miała typ daty i znalazła się na pierwszym miejscu w tabeli (modify też może wymagać podania typu modyfikowanego pola)
- 
+ ALTER TABLE samochody
+ MODIFY kolor varchar(20) AFTER model,
+ MODIFY rok date FIRST;
 -- 6. Zmień nazwę kolumny koszt na cena, precyzja 7 znaków, dwa miejsca po przecinku
  
 -- 7. usuń kolumnę rok
