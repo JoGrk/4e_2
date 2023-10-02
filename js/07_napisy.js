@@ -94,21 +94,56 @@ let toClause = (text) => {
 console.log(toClause(text4))
 
 // 11. zadeklaruj tekst o podanej treści i następnie wypisz tekst przekształcony zgodnie z jego treścią:
-
- 
-
 // A. "powiększ mnie!"
+
+let text ="powiększ mnie!";
+console.log(text.toUpperCase());
 // B. 'ZAPISZ MNIE MAŁYMI LITERAMI'
+text='ZAPISZ MNIE MAŁYMI LITERAMI';
+console.log(text.toLowerCase());
 // C. "!@#$ wytnij te dziwne znaki na początku"
+text= "!@#$ wytnij te dziwne znaki na początku";
+console.log(text.slice(5))
 // D. 'sprawdź, czy zawieram słowo "czy" '
+text= 'sprawdź, czy zawieram słowo "czy" ';
+if (text.indexOf("czy") ==-1){
+    console.log("NIE MA")
+}
+else{
+    console.log("JEST");
+}
+
 // E. "podziel, ten, tekst, od, przecinków" (zwróć tablicę zawierającą słowa między przecinkami jako jej osobne elementy)
+text="podziel, ten, tekst, od, przecinków";
+console.log(text.split(","));
 // 12.
-
- 
-
 // A.  Przygotuj funkcję server, która dla adresu e-mail, który otrzyma jako parametr, zwróci adres serwera (część po znaku @)
+function server(email){
+    let p=email.indexOf("@")
+    return email.slice(p+1)
+
+}
+console.log(server("xyz@poczta.pl"))
 // B. zmodyfikuj funkcję server tak, aby nazwa serwera była zapisana wielkimi literami
+function server2(email){
+    let p=email.indexOf("@")
+    let s= email.slice(p+1)
+     return s.toUpperCase()
+}
+console.log(server2("xyz@poczta.pl"))
+
 // C.zmodyfikuj funkcję server tak, aby w przypadku, gdy parametr nie zwierał @ zwracała tekst "to nie jest prawidłowy adres e-mail).
+function server3(email){
+    let p=email.indexOf("@")
+    if(email.slice())
+    {
+        return `to nie jest prawidłowy adres e-mail`
+    }
+
+    
+}
+console.log(server3("xyz@poczta.pl"))
+
 // 13. utwórz funkcję initials, która przyjmuje jako parametr tekst zawierający imię i nazwisko (np. "Jan Kowalski") i zwraca inicjały, czyli pierwszą literę imienia i pierwszą literę nazwiska, zapisaną małymi literami
 
 // 14. zmodyfikuj poprzednią funkcję tak, aby w przypadku, gdy osoba ma dwa imiona, do inicjału było brane tylko pierwsze imię
