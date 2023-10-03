@@ -135,15 +135,50 @@ console.log(server2("xyz@poczta.pl"))
 // C.zmodyfikuj funkcję server tak, aby w przypadku, gdy parametr nie zwierał @ zwracała tekst "to nie jest prawidłowy adres e-mail).
 function server3(email){
     let p=email.indexOf("@")
-    if(email.slice())
+    
+    if(p==-1)
     {
         return `to nie jest prawidłowy adres e-mail`
+    }
+    else
+    {
+        let s= email.slice(p+1)
+        return s.toUpperCase()
     }
 
     
 }
 console.log(server3("xyz@poczta.pl"))
+console.log(server3("xyzpoczta.pl"))
 
 // 13. utwórz funkcję initials, która przyjmuje jako parametr tekst zawierający imię i nazwisko (np. "Jan Kowalski") i zwraca inicjały, czyli pierwszą literę imienia i pierwszą literę nazwiska, zapisaną małymi literami
 
+let initials = (x) => {
+    let a = x.split(" ")
+    // let imie = a[0]
+    // let nazwisko = a[1]   
+    // let inicjal = imie[0] + nazwisko[0]
+    let inicjal = a[0].charAt(0) + a[1].charAt(0)
+    return inicjal.toUpperCase()
+}
+
+console.log(initials("Szymon Ksiazek"))
+
 // 14. zmodyfikuj poprzednią funkcję tak, aby w przypadku, gdy osoba ma dwa imiona, do inicjału było brane tylko pierwsze imię
+
+let initials2 = (x) =>{
+    let a= x.split(" ")
+    let inicjal
+    if(a.length==2){
+       inicjal = a[0].charAt(0) + a[1].charAt(0)
+    }
+    else{
+        inicjal = a[0].charAt(0) + a[2].charAt(0)
+    }
+    return inicjal.toUpperCase();
+    
+
+}
+
+console.log(initials2("Mati Konicki"))
+console.log(initials2("Wojtek Blazej Wojtas"))
