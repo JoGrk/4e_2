@@ -22,7 +22,7 @@ ADD id_samochodu int AUTO_INCREMENT  PRIMARY KEY FIRST;
 
  
 -- 3. Jako drugą dodaj kolumnę numer - tekst do 16 znaków
- ALTER TABLE samochody
+ ALTER TABLE samochodyż
  add numer varchar(16) AFTER id_samochodu;
 -- 4. zmień nazwę pola mo na model (typ bez zmian)
  ALTER TABLE samochody
@@ -32,5 +32,10 @@ ADD id_samochodu int AUTO_INCREMENT  PRIMARY KEY FIRST;
  MODIFY kolor varchar(20) AFTER model,
  MODIFY rok date FIRST;
 -- 6. Zmień nazwę kolumny koszt na cena, precyzja 7 znaków, dwa miejsca po przecinku
- 
+ ALTER TABLE samochody
+ MODIFY koszt dec(7, 2)
 -- 7. usuń kolumnę rok
+ALTER TABLE samochody
+DROP rok 
+
+
