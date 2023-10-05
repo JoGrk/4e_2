@@ -117,16 +117,20 @@ console.log(hasSpaces(",h./!@#"));  // ➞ false
 
 // Utwórz funkcję, która przyjmuje tekst jako swój parametr i zwraca środkowy znak (znaki). Jeśli tekst ma nieparzystą ilość znaków, funkcja zwraca jeden znak, jeśli parzystą, zwraca dwa znaki 
 
-// function getMiddle(text){
-//     if (text.length%2==0){
-//         return true 
-       
-//     }
-// }
+function getMiddle(text){
+    let d=text.length
+    if (d%2==0){
+        return text.slice(d/2-1,d/2+1)      
+    }
+    else {
+        return text[Math.floor(d/2)]
+        // return text.slice(d/2,d/2+1)
+    }
+}
 // Przykłady:
 
  console.log(getMiddle("test")); //➞ "es"
- console.log(getMiddle("testing")); ➞ "t"
+ console.log(getMiddle("testing"));// ➞ "t"
  console.log(getMiddle("middle"));  // ➞ "dd"
  console.log(getMiddle("A")); // ➞ "A"
 
