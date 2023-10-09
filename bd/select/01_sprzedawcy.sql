@@ -115,7 +115,7 @@ WHERE wartosc BETWEEN 500 and 4000
 
 SELECT * FROM Klienci 
 WHERE Nazwa
-LIKE "B%";
+LIKE "B%";ż
 
 -- 14. Wyświetl informacje o tych klientach, których nazwy kończą się na literę n
 
