@@ -41,11 +41,37 @@ imie.forEach((el) =>{
 })
 console.log(min)
 // 3. Utwórz tablicę nazwisko zawierającą 10 liczb całkowitych (mniej więcej). Utwórz funkcje, która wykorzysta forEach i funkcje strzałkowe do: 
-
- 
-
+let nazwisko=[10,1,2,6,-4,6,1,9,10,24]
+ imie=[12,4,55,36]
+let imiedrugie=[34,23,55,32]
+let cos=[33,553,12,65,32]
 // A obliczenia i zwrócenia iloczynu elementów tablicy, którą otrzyma jako swój parametr
+function calcMulti(table){
+    let multi = 1;
+    table.forEach((el) => {
+        multi*=el;
+    })
+    return multi;
+}
+
+console.log(calcMulti(nazwisko));
+console.log(calcMulti(imie));
+console.log(calcMulti(imiedrugie))
+console.log(calcMulti(cos))
 // B. obliczenia i zwrócenia największego elementu tablicy. 
+
+function calcMax(table){
+    let max=table[0];
+    table.forEach( (el) => {
+        if (el > max){
+            max=el
+        }
+    } )
+    return max
+}
+console.log(calcMax(nazwisko))
+console.log(calcMax(imie))
+
 // Do nazw funkcji dodaj swoje inicjały. Wywołaj te funkcje i wypisz efekt ich działania dla tablicy nazwisko
 
  
@@ -57,6 +83,11 @@ console.log(min)
  
 
 // A. Zmniejsz o 1 każdy element tablicy imie
+console.log(imie)
+imie.forEach((el,i,tab)=>{
+    tab[i]=el-1
+})
+console.log(imie)
 // B. podwój każdy element tablicy nazwisko
 // 5.  Utwórz funkcje, która wykorzysta forEach i funkcje strzałkowe do: 
 
