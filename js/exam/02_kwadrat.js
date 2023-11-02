@@ -14,5 +14,11 @@ btnArea.addEventListener('click',(e)=>{
     
 })
 btnCirc.addEventListener('click',(e)=>{
-    
+    let a=sideE.value;
+    if(a.length==0 || isNaN(a)){
+        result.innerHTML=` Należy wpisać wartość liczbową.`
+    }
+    else{
+        result.innerHTML=`Obw = ${a*4}`
+    }
 })
