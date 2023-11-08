@@ -40,18 +40,53 @@ GROUP BY rodzaj;
 
 -- 10. policz ile rekordów jest w każdym RODZAJU, posortuj malejąco wg RODZAJU;
 
+SELECT rodzaj, COUNT(*)
+FROM towar
+GROUP BY rodzaj 
+ORDER BY rodzaj DESC;
+
+
+
 -- 11. policz sumę i średnią arytmetyczną wartości (ilość * cena) i minimalnej i maksymalnej masie (ilość * waga) dla każdego RODZAJU towaru ;
 
--- 12. policz ile rekordów jest w każdym RODZAJU - wyświetl ilości rekordów większe od 15 ;
+SELECT rodzaj, SUM(ilosc*cena),AVG(ilosc*cena),MIN(ilosc*waga),MAX(ilosc*waga)
+from towar
+GROUP BY rodzaj;
+
+-- 12. policz ile rekordów jest w każdym RODZAJU - wyświetl ilości rekordów większe od 15 ;'
+SELECT rodzaj, COUNT(*) 
+FROM towar
+GROUP BY rodzaj
+HAVING COUNT(*)>15;
 
 -- 13. policz średnią arytmetyczną ceny dla każdego RODZAJU - wyświetl średnie mniejsze od 500;
+SELECT rodzaj, AVG(cena) 
+FROM towar 
+GROUP BY rodzaj
+HAVING AVG(cena)>500; 
 
 -- 14. dla każdego rodzaju towarów wyświetl ilość rekordów, średnią wagę, średnią ilość, maksymalną i minimalną cenę dla ilości rekordów w RODZAJU mniejszej od 15.
-
+SELECT rodzaj,COUNT(*), AVG(waga),AVG(ilosc),MIN(cena),MAX(cena)
+FROM towar 
+GROUP BY rodzaj 
+HAVING COUNT(*)<15;
 -- 15. dla każdego rodzaju towarów wyświetl maksymalną cenę dla ilości rekordów w RODZAJU większe od 10. Uwzględnij tylko towary zamówione.
-
+SELECT rodzaj, MAX(cena)
+FROM towar 
+WHERE zamow = 'PRAWDA'
+GROUP BY rodzaj
+HAVING COUNT(*)>10;
 -- 16. Oblicz minimalną cenę towarów niezamówionych dla każdego rodzaju. 
-
+SELECT rodzaj, MIN(cena)
+FROM towar
+WHERE zamow != 'PRAWDA'
+GROUP BY rodzaj;
 -- 17. oblicz średnią cenę towarów zamówionych (zamow) i nie zamówionych
-
+SELECT zamow, avg(cena) 
+FROM towar
+GROUP BY zamow;
 -- 18. oblicz średnią cenę towarów wyprodukowanych w 1999 roku  dla poszczególnych rodzajów towaru
+SELECT rodzaj, avg(cena)
+FROM towar
+WHERE year(DATA_PROD)=1999 
+GROUP BY rodzaj
