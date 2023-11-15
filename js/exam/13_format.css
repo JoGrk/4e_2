@@ -1,0 +1,14 @@
+#btnR,#btnG,#btnB{
+    width: 30px;
+    height: 30px;
+
+}
+#btnR{
+    background-color: red;
+}
+#btnG{
+    background-color: green;
+}
+#btnB{
+    background-color: blue;
+}
