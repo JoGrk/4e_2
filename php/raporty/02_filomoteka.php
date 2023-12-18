@@ -50,6 +50,31 @@
     echo "</table>";
     $conn->close();
 
+    // tabele z wykorzystanie foreach
+    $conn= new mysqli('localhost','root','','4e_2_filmoteka');
+    $sql="SELECT filmy.*
+    FROM recenzje
+        INNER JOIN Filmy ON recenzje.IDRecenzja=Filmy.recenzjaID
+    WHERE Ocena=4;";
+    $result=$conn->query($sql);
+
+    echo "<table>";
+    while ($row=$result->fetch_assoc()){
+        echo "<tr>";
+        foreach($row as $field){
+            echo "<td>$field</td>";
+        }
+        echo "</tr>";
+    }
+
+    echo "</table>";
+
+    $sql="SELECT ocena,tresc FROM recenzje";
+
+    $result=$conn->query($sql);
+   
+
+    $conn->close();
     ?>
 </body>
 </html>
