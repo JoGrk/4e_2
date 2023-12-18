@@ -1,0 +1,46 @@
+body{
+    font-family: Helvetica
+
+}
+header, footer{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+main{
+    background-color: rgb(176, 196, 222);
+    padding: 50px;
+    text-align: center;
+}
+#left{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 80%;
+}
+#right{
+    background-color: rgb(70, 130, 180);
+    color: white;
+    height: 300px;
+    width: 20%;
+}
+ main img{
+    padding: 3px;
+    border: dotted blue 1px;
+    border-radius: 10px ;
+ }
+ #left img{
+    height: 40%;
+}
+
+#left img:hover{
+    border:solid white 1px ;
+    
+
+}
+
+.flex{
+    display: flex;
+}
+

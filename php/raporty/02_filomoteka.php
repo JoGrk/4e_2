@@ -38,7 +38,7 @@
 
     $sql="SELECT tytul, gatunek
         FROM recenzje
-         INNER JOIN Filmy ON recenzje.IDRecenzja=Filmy.recenzjaID
+            INNER JOIN Filmy ON recenzje.IDRecenzja=Filmy.recenzjaID
         WHERE Ocena=4;";
     $result=$conn->query($sql);
     echo "<table>";
