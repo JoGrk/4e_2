@@ -1,0 +1,10 @@
+SYMBZATR	TYTUL	ZAWOD	SYMB_ST
+UM	Urzad Miasta	Ksiegowosc	bur	
+US	Urzad Skarbowy	Finanse	
+UP	Urzad Pracy	Portier	
+UR	Urzad Rejonowy	Wojsko	gen
+ZG	Zak³ady Górnicz	Dolnik	szt
+KG	KGHM	Dyrektor	mgr
+N	nie pracuje		
+EL	elektrownia	Konstruktor	in¿
+SK	sklep	Sprzedawca	

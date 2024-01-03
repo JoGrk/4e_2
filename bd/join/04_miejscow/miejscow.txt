@@ -1,0 +1,7 @@
+NRMIEJSCOW	NAZWA	NRKIERUN	SERWIS
+1	Lubin	076	Dialog
+2	Legnica	076	Dialog
+3	Polkowice	076	TPSA
+4	G³ogów	076	TPSA
+5	Wroclaw	071	Era
+6	Leszno	068	Era
