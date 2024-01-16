@@ -1,0 +1,11 @@
+const butE = document.getElementById(`send`)
+const surnameErrorE = document.getElementById(`surname-error`)
+const surnameE = document.getElementById(`surname`)
+const emailE = document.getElementById(`email`)
+const emailErrorE = document.getElementById(`email-error`)
+const zipcodeE = document.getElementById(`zipcode`)
+const zipcodeErrorE = document.getElementById(`zipcode-error`)
+const addresE = document.getElementById(`addres`)
+const addresErrorE = document.getElementById(`addres-error`)
+const resE = getElementById(`res`)
+
