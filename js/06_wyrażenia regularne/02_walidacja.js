@@ -14,18 +14,41 @@ butE.addEventListener('click',(e)=>{
     e.preventDefault()
 
     const emailReg = /^\w{4,}@staszic.eu$/i
-
+    const zipcodeReg = /^[0-9]{2}-[0-9]{3}/
+    const adresReg= /^[a-z]{3,}.*[0-9]/i
+    
     
     if(surnameE.value.length < 3){
         surnameErrorE.innerHTML="zbyt krótkie"
-        surnameE.style.backgroundColor="pink"
+        // surnameE.style.backgroundColor="pink"
+        surnameE.classList.add('error')
     }
-    else(
+    else{
         resE.innerHTML=surnameE.value +"<br>"
+        surnameE.classList.remove('error')
+        surnameErrorE.innerHTML=""
         
-    )
+    }
 
-    if(!emailReg.test(emailE.value)){}
+    if(!emailReg.test(emailE.value)){
+        emailErrorE.innerHTML='Adres domeny staszic.eu'
+        emailE.classList.add('error')
+    }
+    else{
+        resE.innerHTML+=emailE.value+'<br>'
+        emailE.classList.remove('error')
+        emailErrorE.innerHTML=""
+    }
+    if(!zipcodeReg.test(zipcodeE.value)){
+        zipcodeErrorE.innerHTML="zly kod pocztowy"
+        zipcodeE.classList.add('error')
+    }
+    else{
+        resE.innerHTML+=zipcodeE.value+"<br>"
+        zipcodeE.classList.remove('error')
+        zipcodeE.innerHTML=""
+    }
+
      
 
 

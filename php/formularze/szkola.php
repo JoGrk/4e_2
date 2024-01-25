@@ -41,5 +41,23 @@
             ?>
         </table>
     </section>
+
+    <section>
+      <h2>Aktualizacja</h2>
+      <form action="aktualizacja.php" method="post">
+        <label for="id-ucznia">Podaj id ucznia: </label>
+        <input type="number" name="id-ucznia" id="id-ucznia"><br>
+        <button>Wyślij</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Usuwanie</h2>
+      <form action="usuwanie.php" method="post">
+        <label for="id-ucznia">Podaj id ucznia: </label>
+        <input type="number" name="id-ucznia" id="id-ucznia"><br>
+        <button>Wyślij</button>
+      </form>
+    </section>
 </body>
 </html>
