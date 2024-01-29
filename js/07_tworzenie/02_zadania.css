@@ -1,0 +1,33 @@
+body{
+    display: flex;
+}
+aside{
+    width: 30%;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    background-color: aqua;
+    height: 100vh;
+}
+
+#top{
+    height: 50vh;
+    background-color: aqua;
+}
+
+#bottom{
+    height: 50vh;
+    background-color: brown;
+}
+
+form{
+    padding: 10px;
+}
+
+main div{
+    height: 5rem;
+    width: 10rem;
+    background-color: papayawhip;
+ }
