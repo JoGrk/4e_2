@@ -1,0 +1,45 @@
+main {
+   display: flex; 
+   
+}
+aside{
+    width: 20%;
+    height: 100vh;
+}
+#images{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#top{
+    background-color:rgba(0, 255, 255, 0.09) ;
+    height: 33%;
+
+    
+}
+#middle{
+    background-color:rgba(0, 255, 255, 0.171) ;
+    height: 33%;
+}
+#bottom{
+    background-color:rgba(0, 255, 255, 0.341) ;
+    height: 33%;
+}
+
+button{
+    margin: 25px ;
+    text-align: center;
+    padding: 15px;
+    background-color: bisque;
+    color: lightblue;
+    display: inline-block;
+}
+
+button:hover{
+    background-color: brown;
+}
+#images img{
+    width: 320px;
+    height: 160px;
+    margin-left: 5px;
+}
