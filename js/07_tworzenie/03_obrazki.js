@@ -10,6 +10,10 @@ const imageList = [
 
 const btnE = document.querySelector('#top button')
 const imagesE=document.querySelector('#images')
+const btnF=document.getElementById('first')
+const btnL=document.getElementById('last')
+const btnW=document.querySelector('#bottom button')
+const inputE=document.getElementById('field')
 
 btnE.addEventListener('click',(e)=>{
     for(let i in imageList){
@@ -24,4 +28,26 @@ btnE.addEventListener('click',(e)=>{
 
 
     }
+})
+
+btnF.addEventListener('click',(e)=>{
+    imagesE.removeChild(imagesE.firstChild)
+})
+
+btnL.addEventListener('click',(e)=>{
+    imagesE.removeChild(imagesE.lastChild)
+})
+btnW.addEventListener('click',(e)=>{
+    let divE = document.createElement('div')
+    let h2E = document.createElement('h2')
+    h2E.innerHTML='nowy'
+    let imgE = document.createElement('img')
+    imgE.src=inputE.value 
+    divE.appendChild(h2E)
+    divE.appendChild(imgE)
+    imagesE.appendChild(divE)``
+})
+
+imagesE.addEventListener('click', (event)=>{
+    imagesE.removeChild(event.target)
 })
