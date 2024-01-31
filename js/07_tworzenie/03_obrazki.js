@@ -49,5 +49,6 @@ btnW.addEventListener('click',(e)=>{
 })
 
 imagesE.addEventListener('click', (event)=>{
-    imagesE.removeChild(event.target)
+    console.dir(event.target) //  img
+    // usuwamy kliknięty div
 })
