@@ -1,0 +1,15 @@
+print ("witaj swiecie")
+liczba =10
+print (liczba)
+tablica=[1,2,3]
+print (tablica)
+
+tablica.append(4)
+print (tablica)
+
+print(4**2)
+for x in tablica:
+    print(x**2)
+
+for x in range(4):
+    print("witaj")
