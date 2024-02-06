@@ -1,0 +1,41 @@
+body {
+    display: flex;
+}
+aside {
+    width: 30%;
+}
+main{
+    width: 70%;
+}
+#top{
+    height: 33vh;
+    background-color: hsl(196, 100%, 90%);
+    padding: 1rem;
+    
+}
+#mid{
+    height: 33vh;
+    background-color: hsl(196, 100%, 80%);
+    padding: 1rem;
+}
+#bot{
+    height: 33vh;
+    background-color: hsl(196, 100%, 70%);
+    padding: 1rem;
+}
+#up{
+    height: 5rem;
+    background-color: hsl(196, 100%, 95%);
+    padding: 1rem;
+    
+}
+#down{
+    display: flex;
+    padding: 2rem;
+    flex-wrap: wrap;
+    align-items: first baseline;
+}
+#down img{
+    height: 10rem;  
+    margin: 2px; 
+}
