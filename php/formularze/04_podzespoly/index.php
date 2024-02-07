@@ -41,10 +41,25 @@
             }
         ?>
     </ul>
-    <form action="dodawanie.php">
-        <input type="text" name="nazwa" placeholder='nazwa'>
+    <form action="dodawanie.php" method="post">
+        <input type="text" name="nazwa" placeholder='nazwa'> <br>
         <input type="number" name="cena" placeholder='cena'>
-        <select name="idTypu" id="idTypu"></select>
+        <br>
+        <input type="number" name="idProducenta" id="idProducenta" placeholder="id Producenta">
+        <br>
+        <select name="idTypu" id="idTypu">
+            <?php
+                foreach($typy as $typ)
+                {
+                    echo "<option value='{$typ['id']}'>
+                    {$typ['kategoria']}
+                    </option>";
+                }
+            ?>
+            
+        </select>
+        <br>
+        <button>Dodaj</button>
     </form>
 </body>
 </html>
