@@ -22,10 +22,28 @@ FROM Products
 WHERE Categoryname = 'Beverages';
 
 -- 5. Do tabeli Archiwum przenieś dane z tabeli Orders dotyczące zamówień z 1996 roku (skopiuj - jeśli trzeba utwórz tabelę -i potem usuń)
+CREATE TABLE Archiwum AS
+SELECT * FROM Orders
+WHERE OrderDate LIKE '1996%'
 
 -- 6. Utwórz tabelę  Archiwum_Kontrahentów z danymi: nazwa dostawcy lub nazwa klienta, osoba do kontaktu, miasto, kraj z Włoch
+CREATE TABLE Archiwum_Kontrahentow AS
+SELECT SupplierName AS ContractorName, ContactName, City, Country 
+FROM Suppliers
+WHERE Country = 'Italy' 
+UNION 
+SELECT CustomerName, ContactName, City, Country 
+FROM Customers
+WHERE Country = 'Italy';
 
 -- 7. Usuń klientów i dostawców z Włoch z tabel Customers i Suppliers (dwoma zapytaniami)
+UPDATE Orders 
+SET CustomerID = null
+WHERE CustomerID IN(SELECT CustomerID FROM Customers WHERE Country = 'Italy');
+DELETE FROM Customers
+WHERE Country = 'Italy';
+DELETE FROM Suppliers
+WHERE Country = 'Italy'
 
 -- 8. Do tabeli Archiwum_Kontrahentów dodaj kontrahentów z Niemiec i Francji
 
