@@ -1,0 +1,12 @@
+.big{
+    font-size: 120%;
+    color:rgb(114, 29, 29)
+}
+.bigger{
+    font-size: 140%;
+    color:rgb(187, 35, 35);
+}
+.thebigest{
+    font-size: 200%;
+    color: red;
+}

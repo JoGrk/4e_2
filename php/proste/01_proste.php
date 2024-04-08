@@ -11,11 +11,39 @@
         echo date("d m Y");
         ?>
     </h1>
+    <table>
+        <tr><td><?php
+        echo date("Y-m-d");
+        ?></td></tr>
+        
+        <tr>
+            <td>
+                <?php
+                    echo date("d/m/Y");
+                ?>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <?php
+                    echo date("m/d/Y");
+                ?>
+            </td>
+        </tr>
+    </table>
     <?php
     
     echo "hello world";
     
     ?>
-
+    <?php
+        echo phpinfo();
+    ?>
+    <h2>
+    <?php
+    echo "&copy; 2019-".date("Y"); 
+    ?>
+    </h2>
+    
 </body>
 </html>
