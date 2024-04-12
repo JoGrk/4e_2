@@ -61,6 +61,11 @@ INSERT INTO Klienci(imie,nazwisko,email )
 VALUES
     ('Wojtek','PANDA','panda.woj@gmail.com'),
     ('Tomek','BUY','pandaBuy@gmail.com');
+INSERT INTO Uslugi(nazwa,cena)
+VALUES
+    ('Sprzatanie',2137),
+    ('Remont',20);
+
 
 -- 6. Upewnij się, że działają więzy integralności (nie puste, wartości się nie powtarzają, check)
 
@@ -72,10 +77,30 @@ VALUES
 
 -- A. pierwszy klient zamawia pierwszą usługę, przy wprowadzaniu danych posługuj się nazwami usług
 
+INSERT INTO Klucze(ID_Klienci,ID_Uslugi)
+VALUES
+    (1,(SELECT id from Uslugi WHERE nazwa='sprzatanie'));
+
 -- B. Drugi klient zamawia obie usługi, przy wprowadzaniu danych posługuj się nazwami usług
+
+INSERT INTO Klucze(ID_Klienci,ID_Uslugi)
+VALUES
+    (2, (SELECT id FROM Uslugi WHERE nazwa='sprzatanie')),
+    (2, (SELECT id FROM Uslugi WHERE nazwa='Remont'));
 
 -- 8. Upewnij się, że działają więzy integralności referencyjnej
 
 -- A. usuń dane pierwszego klienta z tabeli klienci,
+DELETE FROM Klienci
+WHERE ID=1;
 --  B. z tabeli klienci usuń dane pierwszego klienta stosując podejście wyważone
+UPDATE Klucze
+SET ID_Klienci=NULL
+WHERE ID_Klienci=1;
 -- C. z tabeli klienci usuń dane drugiego klienta stosując podejście kaskadowe usuwanie powiązanych pól
+
+DELETE FROM Klucze
+WHERE ID_Klienci = 2;
+
+DELETE FROM Klienci
+WHERE ID = 2;

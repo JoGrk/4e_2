@@ -30,14 +30,20 @@ SELECT CURDATE(), DATE_ADD(CURDATE(), INTERVAL 1 DAY) AS DZIENPOZNIEJ, DATE_ADD(
 
 -- 7. Wyświetl dowolną datę, oraz datę dzień wcześniej, tydzień, miesiąc i rok
 
-
+SELECT CURDATE(),  DATE_SUB(CURDATE(), INTERVAL 1 DAY) AS DzienWCZESNIEJ;
 
 -- DAY(data) MONTH(data) QUARTER(data) YEAR(data) - wyciągają z daty dzień, miesiąc, kwartał i rok
 
 -- 8. wyciągnij z dowolnej daty dzień, miesiac, kwartał, rok
 
-
+SELECT
+    DAY(CURDATE()) AS dzien,
+    MONTH(CURDATE()) AS miesiac,
+    QUARTER(CURDATE()) AS kwartal,
+    YEAR(CURDATE()) AS rok;
 
 -- WEEKDAY(data) wyświetla numer dnia tygodnia
 
 -- 9. wyświetl numer aktualnego dnia tygodnia, czy tydzień zaczyna się od poniedziałku czy niedzieli?
+
+SELECT WEEKDAY(CURDATE()) AS dzientygonia;
