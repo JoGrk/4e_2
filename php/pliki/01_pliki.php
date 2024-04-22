@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+ 
 
     <?php
         echo "To jest główny skrypt ";
         // include "jeden.php";
         // require "dwa.php";
+        
         $nazwa_pliku = $_GET['nazwa_pliku'];
 
         if(file_exists($nazwa_pliku)){
@@ -28,7 +30,7 @@
 
         
 
-        if(!file_exist('jeden.php')){
+        if(!file_exists('jeden.php')){
             echo"nie ma pliku";
         }
         
@@ -40,11 +42,13 @@
         
     
     ?>
-    <form action="01_pliki.php" method="get">
+       <form action="01_pliki.php" method="get">
         <label for="nazwa_pliku">nazwa pliku</label>
         <input type="text" name="nazwa_pliku" id="nazwa_pliku">
         <button>wyslij</button>
     </form>
+ 
+ 
 
 </body>
 </html>
