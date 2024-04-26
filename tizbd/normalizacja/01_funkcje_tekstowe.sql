@@ -41,3 +41,22 @@ Alter table my_contacts
 
 UPDATE my_contacts
     SET i1= substring_index(interests,",",1);
+
+SELECT interests, trim(substring(interests,char_length(i1)+2)) as bw
+FROM my_contacts;
+
+
+UPDATE my_contacts
+    SET interests = trim(substring(interests,char_length(i1)+2));
+
+UPDATE my_contacts
+    SET i2= substring_index(interests,",",1);
+    
+UPDATE my_contacts
+    SET interests = trim(substring(interests,char_length(i2)+2));
+
+SELECT interests, i1, i2, i3
+FROM my_contacts;
+
+UPDATE my_contacts
+    SET i3 = interests;
