@@ -60,3 +60,43 @@ FROM my_contacts;
 
 UPDATE my_contacts
     SET i3 = interests;
+
+ALTER TABLE my_contacts
+    DROP interests;
+
+CREATE TABLE interests AS 
+SELECT i1 as name  
+FROM my_contacts
+WHERE i1 != '' AND i1 is NOT NULL
+UNION 
+SELECT i2 
+FROM my_contacts
+WHERE i2 != '' AND i2 is NOT NULL
+UNION
+SELECT i3
+FROM my_contacts
+WHERE i3 != '' AND i3 is NOT NULL;
+
+ALTER TABLE interests
+    ADD ID int auto_increment primary key first;
+
+CREATE TABLE interests_contact AS
+SELECT my_contacts.id AS id_contact, interests.id AS id_interest 
+FROM my_contacts
+    INNER JOIN interests ON my_contacts.i1=interests.name
+UNION
+SELECT my_contacts.id AS id_contact, interests.id AS id_interest 
+FROM my_contacts
+    INNER JOIN interests ON my_contacts.i2=interests.name
+UNION
+SELECT my_contacts.id AS id_contact, interests.id AS id_interest 
+FROM my_contacts
+    INNER JOIN interests ON my_contacts.i3=interests.name;
+
+ALTER TABLE my_contacts
+DROP i1, DROP i2, DROP i3;
+
+
+
+
+

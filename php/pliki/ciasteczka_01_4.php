@@ -10,7 +10,11 @@
 <body>
 <?php 
     if(isset($_COOKIE['visited'])){
-        echo "Witamy ponownie w cyrku";
+        
+        $ciastko = $_COOKIE['visited'];
+        $ciastko++;
+        setcookie('visited',$ciastko,time()+60*60);
+        echo "Witamy ponownie w cyrku $ciastko raz";
          
     }
     else{
