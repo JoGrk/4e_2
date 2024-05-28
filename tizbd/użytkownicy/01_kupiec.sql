@@ -66,14 +66,18 @@ GRANT INSERT ON Egzaminy.Test TO 'kupiec';
 -- D. Może wyświetlić zawartość tabeli Test
 -- E. Może dodać dane (liczbę 5)
 -- 14. Utwórz użytkownika serwisant
- 
+ CREATE USER 'serwisant';
+
 -- 15. Daj prawo serwisantowi do usuwania danych z tabeli test w bazie egzaminy (samo usuwanie, bez prawa do wyszukiwania).
- 
+ GRANT DELETE ON egzaminy.test TO 'serwisant'; 
+ GRANT SELECT ON egzaminy.test TO 'serwisant';
 -- 16. Sprawdź, czy serwisant (prawo do usuwania danych):
 -- A. widzi bazę Egzaminy
 -- B. Może jej użyć
 -- C. Widzi tabele w tej bazie
 -- D. Może wyświetlić zawartość tabeli Test
 -- E. Może usunąć dane (liczbę 3)
+DELETE FROM test
+where id = 3;
 -- F. Może usunąć wszystkie dane;
 -- 17. Jeśli użytkownik serwisant ma problemy z usuwaniem, popraw to (ale nie dawaj mu za dużo praw, a już na pewno nie wszystkie), najpierw dodaj do tabeli liczby 1,2,3
