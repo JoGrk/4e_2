@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kwiaty</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styl3.css">
 </head>
 <body>
-    <header>
+<header>
         <h1>Grupa Polskich Kwiaciarni</h1>
     </header>
     
@@ -28,10 +28,15 @@
             </ol>
         </section>
         <section id="right">
-            <h2>Strona dla miłośników kwiatów</h2>
-            <img src="gerbera.jpg" alt="gerbera">
-            <img src="roza.jpg" alt="roza">
-            <img src="gozdzik.jpg" alt="gozdzik">
+           <h2>Znajdź kwiaciarnię</h2>
+           <form action="znajdz.php" method="post">
+            <label for="miasto">Podaj nazwę miasta: </label>
+            <input type="text" id="miasto">
+            <button>SPRAWDŹ</button>
+           </form>
+           <?php
+           $conn = new mysqli('localhost','root','',' ');
+           ?>
         </section>
     </main>
 

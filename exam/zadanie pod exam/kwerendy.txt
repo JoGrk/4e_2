@@ -1,0 +1,15 @@
+SELECT id, imie, nazwisko, rok_urodzenia, zdjecie
+FROM osoby
+LIMIT 30;
+
+SELECT imie, nazwisko, rok_urodzenia, opis, zdjecie
+FROM osoby
+    INNER JOIN hobby ON osoby.Hobby_id=hobby.id
+WHERE osoby.id=10;
+
+SELECT avg(rok_urodzenia) as sredni, max(rok_urodzenia) as max, min(rok_urodzenia) as min
+FROM osoby;
+
+UPDATE osoby 
+SET opis="lubie spac" 
+WHERE Hobby_id=4;
